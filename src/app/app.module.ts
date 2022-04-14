@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CabeceraComponent } from './components/cabecera/cabecera.component';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    CabeceraComponent
+    CabeceraComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule

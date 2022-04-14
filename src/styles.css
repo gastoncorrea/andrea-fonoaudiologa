@@ -2,3 +2,8 @@
 .fondo-color {
     background-color: aqua;
 }
+
+.fuente{
+    font-family: 'Square Peg', cursive;
+    color: rgb(241, 172, 81);
+}
