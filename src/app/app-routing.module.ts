@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {Routes, RouterModule} from '@angular/router';
 import { TurnosComponent } from './components/turnos/turnos.component';
-import { CabeceraComponent } from './components/cabecera/cabecera.component';
 import { FormUsuarioComponent } from './backoffice/usuario/form-usuario/form-usuario.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 const routes:Routes = [
-  {path: '', component: CabeceraComponent},
+  {path: '', component: HomeComponent},
   {path: 'turnos', component : TurnosComponent},
   {path: 'nuevo-usuario', component: FormUsuarioComponent}
 ];

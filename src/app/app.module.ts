@@ -9,6 +9,7 @@ import { TurnosComponent } from './components/turnos/turnos.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { FormUsuarioComponent } from './backoffice/usuario/form-usuario/form-usuario.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FormUsuarioComponent } from './backoffice/usuario/form-usuario/form-usu
     CabeceraComponent,
     InicioComponent,
     TurnosComponent,
-    FormUsuarioComponent
+    FormUsuarioComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
