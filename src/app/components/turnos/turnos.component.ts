@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-turnos',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./turnos.component.css']
 })
 export class TurnosComponent implements OnInit {
-
-  constructor() { }
+  constructor( private formBuilder: FormBuilder) {
+    
+   }
 
   ngOnInit(): void {
+    
   }
+
+  
 
 }
