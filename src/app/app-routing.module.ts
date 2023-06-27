@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {Routes, RouterModule} from '@angular/router';
-import { TurnosComponent } from './components/turnos/turnos.component';
-import { FormUsuarioComponent } from './backoffice/usuario/form-usuario/form-usuario.component';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './features/public/components/home/home.component';
+import { TurnosComponent } from './features/public/components/turnos/turnos.component';
+import { FormUsuarioComponent } from './features/public/components/usuario/form-usuario/form-usuario.component';
 
 
 const routes:Routes = [
