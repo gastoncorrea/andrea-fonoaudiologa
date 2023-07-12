@@ -1,5 +1,5 @@
 .custom-slider{
-    height: 400px !important;
+    height: 300px !important;
     overflow: hidden;
 }
 
@@ -15,14 +15,14 @@
 
 @media (min-width: 768px) and (max-width:1024px){
     .custom-slider{
-        height: 500px !important;
+        height: 400px !important;
         overflow: hidden;
     }   
 }
 
 @media (min-width: 1025px){
     .custom-slider{
-        height: 600px !important;
+        height: 500px !important;
         overflow: hidden;
     }
 }
