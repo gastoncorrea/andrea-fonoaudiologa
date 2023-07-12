@@ -1,4 +1,8 @@
 .fondo{
-    /*background-color: rgb(241, 172, 81);*/
-    background-color: rgb(255, 144, 0 , 0.7);
+    background-color: rgb(255, 144, 0 , 0.6);
+}
+
+.img-brand{
+    width: 50px;
+    border-radius: 50%;
 }
