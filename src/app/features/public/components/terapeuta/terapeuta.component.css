@@ -1,0 +1,27 @@
+.card-img-top{
+    height: 250px !important;
+    overflow: hidden;
+}
+
+.card-text{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Define el número de líneas que deseas mostrar */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2; /* Ajusta el line-height para mostrar dos líneas completas */
+    height: 2.4em; /* 1.2 (line-height) * 2 (número de líneas) = 2.4em */
+}
+
+.card-body{
+    height: 112px !important;
+}
+
+.text-decoration-none{
+    text-decoration: none;
+    color: #000000;
+}
+
+.text-underline:hover{
+    text-decoration: underline;
+}

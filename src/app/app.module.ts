@@ -13,6 +13,7 @@ import { HomeComponent } from './features/public/components/home/home.component'
 import { UsuarioService } from './core/services/usuario.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormUsuarioComponent } from './features/public/components/usuario/form-usuario/form-usuario.component';
+import { TerapeutaComponent } from './features/public/components/terapeuta/terapeuta.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FormUsuarioComponent } from './features/public/components/usuario/form-
     InicioComponent,
     TurnosComponent,
     FormUsuarioComponent,
-    HomeComponent
+    HomeComponent,
+    TerapeutaComponent
   ],
   imports: [
     BrowserModule,
