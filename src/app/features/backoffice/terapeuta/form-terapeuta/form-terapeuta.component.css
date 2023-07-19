@@ -1,0 +1,7 @@
+textarea.form-control {
+    height: auto;
+  }
+
+.form-label{
+    text-align: start !important;
+}

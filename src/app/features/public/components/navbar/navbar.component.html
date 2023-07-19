@@ -6,9 +6,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav mx-auto">
-        <a class="nav-link active" aria-current="page" href="#">Novedades</a>
-        <a class="nav-link" href="#">Consultá</a>
-        <a class="nav-link" href="#">¿Quien soy?</a>
+        <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" aria-current="page" href="#">Novedades</a>
+        <a class="nav-link" routerLink="quienes-somos" routerLinkActive="active">Conocenos</a>
         <a class="nav-link ">Suscribite</a>
         <a class="nav-link ">Login</a>
         <a class="nav-link " routerLink="nuevo-usuario"><button type="button" class="btn btn-primary py-0">Pedir Turno</button></a>

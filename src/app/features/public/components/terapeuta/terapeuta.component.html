@@ -7,7 +7,7 @@
         fugiat at ducimus, rem consectetur repudiandae repellendus modi fugit eum in unde nisi ratione, officia
         distinctio delectus accusantium. Totam voluptatem dolor veniam quis ut, ipsa quo nihil et. Expedita vel suscipit
         ipsam minus distinctio. Vitae repellat fuga hic autem aliquid ipsam, delectus ipsum dicta!</p>
-    <div class="row row-cols-1 row-cols-md-2 g-4 w-100 my-5">
+    <div class="row row-cols-1 row-cols-md-2 g-4 w-100 my-5 mx-auto" ngFor="data">
         <div class="col ">
             <div class="card">
                 <img src="assets/img/prueba-imagen.jpg" class="card-img-top" alt="...">
@@ -20,14 +20,13 @@
                 </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col" *ngFor="let terapeuta of terapeutas">
             <div class="card">
-                <img src="assets/img/andrea-profe.jpeg" class="card-img-top" alt="...">
+                <img [src]="terapeuta.imagen_perfil" class="card-img-top" alt="terapeuta.descripcion_terapia">
                 <div class="card-body">
                     <a href="#" class="text-decoration-none">
-                        <h5 class="card-title text-underline">Andrea Morales - Fonoaudiologa</h5>
-                        <p class="card-text text-underline">Soy licenciada en Fonoaudiologia, trabajo con niños y adultos con diferentes
-                            terapias</p>
+                        <h5 class="card-title text-underline">{{terapeuta.nombre}} - {{terapeuta.apellido}} </h5>
+                        <p class="card-text text-underline">{{terapeuta.descripcion_terapia}}</p>
                     </a>
                 </div>
             </div>
@@ -57,4 +56,5 @@
             </div>
         </div>
     </div>
+    <app-form-terapeuta></app-form-terapeuta>
 </div>

@@ -14,6 +14,7 @@ import { UsuarioService } from './core/services/usuario.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormUsuarioComponent } from './features/public/components/usuario/form-usuario/form-usuario.component';
 import { TerapeutaComponent } from './features/public/components/terapeuta/terapeuta.component';
+import { FormTerapeutaComponent } from './features/backoffice/terapeuta/form-terapeuta/form-terapeuta.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { TerapeutaComponent } from './features/public/components/terapeuta/terap
     TurnosComponent,
     FormUsuarioComponent,
     HomeComponent,
-    TerapeutaComponent
+    TerapeutaComponent,
+    FormTerapeutaComponent
   ],
   imports: [
     BrowserModule,

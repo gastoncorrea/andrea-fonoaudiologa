@@ -1,0 +1,54 @@
+<div class="row justify-content-center align-items-center w-100 m-0 p-2">
+    <div class="card  col-sm-12 col-md-8 col-lg-6 my-5 shadow border-0 p-5 ">
+        <div class="card-header">Terapeuta</div>
+        <div class="card-body">
+            <h5 class="card-title">Nuevo Terapeuta</h5>
+            <p class="card-text">Para poder mostrarse disponible a los pacientes cargue sus datos</p>
+            <form [formGroup]="therapistForm" (ngSubmit)="enviarTerapeuta()">
+                <div class="form-floating mb-4">
+                    <input type="text" class="form-control border-0 border-bottom shadow-none"
+                        placeholder="Nombre del terapeuta" id="nombre" formControlName="nombre">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                </div>
+                <div class="form-floating mb-4">
+                    <input type="text" class="form-control border-0 border-bottom shadow-none"
+                        placeholder="Apellido del terapeuta" id="apellido" formControlName="apellido">
+                    <label for="apellido" class="form-label">Apellido:</label>
+                </div>
+                <div class="form-floating mb-5">
+                    <textarea rows="5" class="form-control border-0 border-bottom shadow-none"
+                        placeholder="descripcion de la terapia" id="descripcion"
+                        formControlName="descripcion_terapia"></textarea>
+                    <label for="descripcion" class="form-label">Descripcion breve de la terapia:</label>
+                </div>
+                <div class="mb-5 text-start">
+                    <label for="imagen_perfil" class="form-label mb-4 ms-3">Selecciona una imagen de perfil:</label>
+                    <input type="file" class="form-control" (change)="imagenBlob($event)" accept="image/jpg, image/png"
+                        id="imagen_perfil">
+                </div>
+                <div *ngIf="imageMin">
+                    <img [src]="imageMin" alt="" class="w-100">
+                </div>
+                <div class="form-floating mb-4">
+                    <input type="email" class="form-control border-0 border-bottom shadow-none"
+                        placeholder="Email del terapeuta" id="email" formControlName="email">
+                    <label for="email" class="form-label">Correo electronico:</label>
+                </div>
+                <div class="form-floating">
+                    <select class="form-select" formControlName="terapia" id="floatingSelect"
+                        aria-label="Floating label select">
+                        <option >Terapias</option>
+                        <option value="fonoaudiologia" selected>Fonoaudiologia</option>
+                        <option value="psicologia">Psicologia</option>
+                        <option value="psicopedagogia">Psicopedagogia</option>
+                        <option value="fisioterapeuta">Fisioterapeuta</option>
+                    </select>
+                    <label for="floatingSelect">Seleccione que terapias ofrece a sus pacientes</label>
+                </div>
+                <button class="btn btn-outline-primary rounded-pill p-3 fw-bold mt-3 w-100" type="submit">
+                    Continuar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
