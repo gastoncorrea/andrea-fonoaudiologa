@@ -18,4 +18,21 @@ export class TerapeutaService {
   getAllTherapist(): Observable<any>{
     return this.http.get(this.URL+"all");
   }
+
+  getOneTherapist(id:number):Observable<any>{
+    return this.http.get(this.URL+"find/"+id);
+  }
+
+  updateTherapist(id:number, therapist:Terapeuta):Observable<any>{
+    return this.http.put(this.URL+"update/"+id,{nombre:therapist.nombre,
+                                                apellido: therapist.apellido,
+                                                descripcion_terapia: therapist.descripcion_terapia,
+                                                imagen_perfil: therapist.imagen_perfil,
+                                                email: therapist.email,
+                                                terapia: therapist.terapia});
+  }
+
+  deleteTherapist(id:number):Observable<any>{
+    return this.http.delete(this.URL+"delete/"+id);
+  }
 }
