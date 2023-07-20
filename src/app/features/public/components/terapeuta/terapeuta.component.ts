@@ -15,16 +15,12 @@ export class TerapeutaComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.terapeutaService.listaDeTerapeutas().subscribe((data) => {
-      console.log(data);
+    this.terapeutaService.getAllTherapist().subscribe((data) => {
       if (data) {
         for (let terapeutaItem of data) {
-          console.log(terapeutaItem.imagen_perfil);
           const imagenMin = "data:image/jpeg;base64," + terapeutaItem.imagen_perfil;
-          console.log(imagenMin)
           terapeutaItem.imagen_perfil = imagenMin;
         }
-        console.log("data procesado:", data);
         this.terapeutas = data;
       }
     })

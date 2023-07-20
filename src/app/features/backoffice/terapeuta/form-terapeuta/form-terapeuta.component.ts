@@ -55,8 +55,7 @@ imagenBlob(event: Event){
 
 enviarTerapeuta(){
   if (this.therapistForm.valid) {
-    console.log("formValido", this.therapistForm.value);
-    this.terapeutaService.guardarTerapeuta(this.therapistForm.value).subscribe((data) => {
+    this.terapeutaService.saveTherapist(this.therapistForm.value).subscribe((data) => {
       alert(data);
     })
   } else {

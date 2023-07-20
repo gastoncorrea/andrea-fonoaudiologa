@@ -11,11 +11,11 @@ export class TerapeutaService {
   constructor(private http: HttpClient) { }
   URL:String="http://localhost:8080/terapeuta/";
 
-  guardarTerapeuta(terapeuta: Terapeuta): Observable<any>{
+  saveTherapist(terapeuta: Terapeuta): Observable<any>{
     return this.http.post(this.URL+"save", terapeuta, {responseType: 'text'});
   }
 
-  listaDeTerapeutas(): Observable<any>{
+  getAllTherapist(): Observable<any>{
     return this.http.get(this.URL+"all");
   }
 }

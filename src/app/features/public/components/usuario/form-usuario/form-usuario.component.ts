@@ -28,7 +28,7 @@ export class FormUsuarioComponent implements OnInit {
 
   guardarUsuario(){
 
-    this.usuarioService.guardarUsuario(this.userForm.value).subscribe((res)=>{
+    this.usuarioService.saveUser(this.userForm.value).subscribe((res)=>{
       alert(res);
     })
   }
