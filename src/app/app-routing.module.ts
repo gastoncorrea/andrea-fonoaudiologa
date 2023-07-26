@@ -5,13 +5,16 @@ import { HomeComponent } from './features/public/components/home/home.component'
 import { TurnosComponent } from './features/public/components/turnos/turnos.component';
 import { FormUsuarioComponent } from './features/public/components/usuario/form-usuario/form-usuario.component';
 import { TerapeutaComponent } from './features/public/components/terapeuta/terapeuta.component';
+import { FormTerapeutaComponent } from './features/backoffice/terapeuta/form-terapeuta/form-terapeuta.component';
 
 
 const routes:Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
   {path: 'turnos', component : TurnosComponent},
   {path: 'nuevo-usuario', component: FormUsuarioComponent},
-  {path: 'quienes-somos', component: TerapeutaComponent}
+  {path: 'quienes-somos', component: TerapeutaComponent},
+  {path: 'therapist/create', component: FormTerapeutaComponent},
+  {path: 'therapist/update/:id',component: FormTerapeutaComponent}
 ];
 
 @NgModule({

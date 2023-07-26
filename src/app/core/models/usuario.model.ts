@@ -9,10 +9,11 @@
 }
 
 export interface Terapeuta{
-    nombre:String,
-    apellido:String,
-    descripcion_terapia: String,
+    id_terapeuta:number
+    nombre:string,
+    apellido:string,
+    descripcion_terapia: string,
     imagen_perfil: Blob,
-    email:String,
-    terapia:String
+    email:string,
+    terapia:string
 }
