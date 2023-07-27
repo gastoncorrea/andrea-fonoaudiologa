@@ -30,6 +30,7 @@ export class FormUsuarioComponent implements OnInit {
 
     this.usuarioService.saveUser(this.userForm.value).subscribe((res)=>{
       alert(res);
+      this.ngOnInit();
     })
   }
 }

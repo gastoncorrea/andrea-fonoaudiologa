@@ -9,6 +9,10 @@ import { TerapeutaService } from 'src/app/core/services/terapeuta.service';
 })
 export class TerapeutaComponent implements OnInit {
   terapeutas?: Terapeuta[] = [];
+  quienes_somos = {
+    title : "Conocé quienes somos ...",
+    description: ""//crear variable input para poder modificar el componente con otro componente
+  }
 
   constructor(private terapeutaService: TerapeutaService) {
 

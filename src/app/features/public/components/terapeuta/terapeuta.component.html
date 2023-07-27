@@ -1,31 +1,16 @@
 <div class="text-center my-5">
-    <h1>Conocé quienes somos</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ipsa, necessitatibus corporis quod incidunt
-        inventore cumque rem ullam numquam iusto non doloribus, nesciunt nostrum. Eos animi quos, atque consectetur
-        fugiat in harum perferendis recusandae alias excepturi praesentium quaerat quis dolore accusamus itaque porro
-        dolorem! Exercitationem, facere. Molestiae quod nobis ullam itaque natus dolorem adipisci possimus deserunt
-        fugiat at ducimus, rem consectetur repudiandae repellendus modi fugit eum in unde nisi ratione, officia
-        distinctio delectus accusantium. Totam voluptatem dolor veniam quis ut, ipsa quo nihil et. Expedita vel suscipit
-        ipsam minus distinctio. Vitae repellat fuga hic autem aliquid ipsam, delectus ipsum dicta!</p>
+    <div class="container">
+        <h1 class="my-5">{{quienes_somos.title}} </h1>
+        <p *ngIf="!quienes_somos.description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non et corrupti numquam repellat suscipit sequi sunt atque vel culpa, architecto asperiores blanditiis vero! Voluptatem error molestiae ad quas temporibus voluptatum nostrum quaerat ducimus molestias asperiores doloremque unde velit in sequi, voluptate autem optio esse quidem corrupti! Adipisci odio vel, atque autem blanditiis fugit accusantium sunt reprehenderit rem minus nihil animi veritatis iure dolor quasi impedit ut praesentium. Excepturi dicta architecto perspiciatis, praesentium dolorum minus fuga nihil rem corrupti perferendis dignissimos voluptatum nobis maxime omnis blanditiis eligendi consectetur accusamus sequi minima consequuntur ipsam possimus assumenda sed! Dignissimos fuga error, itaque explicabo nostrum non necessitatibus amet vitae, consectetur ipsum, deserunt quis natus voluptatem! Maiores corporis suscipit labore exercitationem ad reprehenderit recusandae, repellat molestiae pariatur nam dolor perferendis natus consequuntur autem harum, vel modi iusto ratione id cupiditate inventore sequi quasi reiciendis sed. Iste libero consequuntur ipsa est incidunt accusantium, sequi, et assumenda architecto nisi quam ducimus, blanditiis explicabo necessitatibus omnis aut molestias asperiores? Rerum error nostrum omnis accusantium, recusandae dolores cumque minus molestiae! Fugiat rem ullam alias voluptatibus veritatis, sunt odio nam at, culpa praesentium eveniet impedit, exercitationem modi numquam hic a sint. Natus amet maiores totam tempore. Sapiente, optio perferendis aliquam soluta omnis explicabo odit hic blanditiis dolorum obcaecati excepturi facilis est quae nihil nostrum pariatur, officia sit aperiam ex, itaque vel esse eligendi ut? Ipsum cumque, exercitationem cupiditate voluptates molestiae soluta assumenda accusamus deleniti corporis itaque suscipit adipisci cum officiis ex nihil facere expedita unde vel deserunt voluptate illo. Voluptatibus ad veniam facere, sed accusamus est pariatur deleniti atque, quia minima molestias harum vitae velit quaerat maiores. Minima, alias voluptates, vel distinctio et eum non rem odio voluptate deleniti, natus ea. Unde quos sed laudantium, sint maiores quae nihil consectetur amet vel repellendus quod provident! Officia est iure nihil pariatur?</p>
+            <p *ngIf="quienes_somos.description">{{quienes_somos.description}}</p>
+    </div>
     <div class="row row-cols-1 row-cols-md-2 g-4 w-100 my-5 mx-auto" ngFor="data">
-        <div class="col ">
-            <div class="card">
-                <img src="assets/img/prueba-imagen.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#" class="text-decoration-none">
-                        <h5 class="card-title text-underline">Andrea Morales - Fonoaudiologa</h5>
-                        <p class="card-text text-underline">Soy licenciada en Fonoaudiologia, trabajo con niños y adultos con diferentes
-                            terapias</p>
-                    </a>
-                </div>
-            </div>
-        </div>
         <div class="col" *ngFor="let terapeuta of terapeutas">
             <div class="card">
                 <img [src]="terapeuta.imagen_perfil" class="card-img-top" alt="terapeuta.descripcion_terapia">
                 <div class="card-body">
                     <a href="#" class="text-decoration-none">
-                        <h5 class="card-title text-underline">{{terapeuta.nombre}} - {{terapeuta.apellido}} </h5>
+                        <h5 class="card-title text-underline">{{terapeuta.nombre}}  {{terapeuta.apellido}} </h5>
                         <p class="card-text text-underline">{{terapeuta.descripcion_terapia}}</p>
                     </a>
                 </div>

@@ -6,6 +6,7 @@ import { TurnosComponent } from './features/public/components/turnos/turnos.comp
 import { FormUsuarioComponent } from './features/public/components/usuario/form-usuario/form-usuario.component';
 import { TerapeutaComponent } from './features/public/components/terapeuta/terapeuta.component';
 import { FormTerapeutaComponent } from './features/backoffice/terapeuta/form-terapeuta/form-terapeuta.component';
+import { ListTerapeutaComponent } from './features/backoffice/terapeuta/list-terapeuta/list-terapeuta.component';
 
 
 const routes:Routes = [
@@ -14,7 +15,8 @@ const routes:Routes = [
   {path: 'nuevo-usuario', component: FormUsuarioComponent},
   {path: 'quienes-somos', component: TerapeutaComponent},
   {path: 'therapist/create', component: FormTerapeutaComponent},
-  {path: 'therapist/update/:id',component: FormTerapeutaComponent}
+  {path: 'therapist-list', component: ListTerapeutaComponent},
+  {path: 'therapist-list/update/:id',component: FormTerapeutaComponent},
 ];
 
 @NgModule({

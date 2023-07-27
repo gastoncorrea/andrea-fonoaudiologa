@@ -24,4 +24,11 @@ export class ListTerapeutaComponent implements OnInit {
       }
     })
   }
+
+  deleteTherapist(id:number){
+    this.therapistService.deleteTherapist(id).subscribe((data)=>{
+      alert(data);
+      this.ngOnInit();
+    })
+  }
 }

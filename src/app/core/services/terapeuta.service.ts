@@ -28,6 +28,6 @@ export class TerapeutaService {
   }
 
   deleteTherapist(id: number): Observable<any> {
-    return this.http.delete(this.URL + "delete/" + id);
+    return this.http.delete(this.URL + "delete/" + id,{responseType:'text'});
   }
 }

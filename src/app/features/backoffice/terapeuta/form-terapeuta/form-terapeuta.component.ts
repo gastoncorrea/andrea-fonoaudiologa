@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Terapeuta } from 'src/app/core/models/usuario.model';
 import { TerapeutaService } from 'src/app/core/services/terapeuta.service';
 
@@ -16,7 +16,7 @@ export class FormTerapeutaComponent implements OnInit {
   idEdit:any;
 
   constructor(private terapeutaService: TerapeutaService,
-    private formBuilder: FormBuilder, private route: ActivatedRoute) {
+    private formBuilder: FormBuilder, private route: ActivatedRoute, private router: Router) {
 
     this.therapistForm = this.formBuilder.group({
       nombre: ["", [Validators.required, Validators.minLength(2), Validators.maxLength(50)]],
@@ -66,13 +66,17 @@ export class FormTerapeutaComponent implements OnInit {
           alert(JSON.stringify(data));
           console.log(data);
           this.modify = false
+          this.terapeutaService.getAllTherapist();
         });
+        this.router.navigate(['therapist-list']);
       }
     }else{
       if (this.therapistForm.valid) {
         this.terapeutaService.saveTherapist(this.therapistForm.value).subscribe((data) => {
           alert(data);
-        })
+          this.terapeutaService.getAllTherapist();
+        });
+        this.router.navigate(['therapist-list']);
       } else {
         console.log("Form invalido");
 
