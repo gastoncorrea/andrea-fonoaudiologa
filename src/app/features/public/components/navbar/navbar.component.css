@@ -2,6 +2,15 @@
     background-color: rgb(255, 144, 0 , 0.6);
 }
 
+.btn{
+    background-color: rgba(7, 255, 255, 0.567);
+    border:none;color: black;
+    padding: 15px;
+}
+.btn:active{
+    background-color: aliceblue;
+}
+
 .img-brand{
     width: 50px;
     border-radius: 50%;
