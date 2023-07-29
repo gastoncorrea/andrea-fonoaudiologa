@@ -16,6 +16,7 @@ import { FormUsuarioComponent } from './features/public/components/usuario/form-
 import { TerapeutaComponent } from './features/public/components/terapeuta/terapeuta.component';
 import { FormTerapeutaComponent } from './features/backoffice/terapeuta/form-terapeuta/form-terapeuta.component';
 import { ListTerapeutaComponent } from './features/backoffice/terapeuta/list-terapeuta/list-terapeuta.component';
+import { OurWorkComponent } from './features/public/components/our-work/our-work.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ListTerapeutaComponent } from './features/backoffice/terapeuta/list-ter
     HomeComponent,
     TerapeutaComponent,
     FormTerapeutaComponent,
-    ListTerapeutaComponent
+    ListTerapeutaComponent,
+    OurWorkComponent
   ],
   imports: [
     BrowserModule,
