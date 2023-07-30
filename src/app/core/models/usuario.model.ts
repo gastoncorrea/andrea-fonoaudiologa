@@ -17,3 +17,11 @@ export interface Terapeuta{
     email:string,
     terapia:string
 }
+
+export interface Disponibilidad{
+    id_disponibilidad:number;
+    dia: Date;
+    hora_inicio: Date;
+    hora_fin:Date;
+    terapeuta:any;
+}
