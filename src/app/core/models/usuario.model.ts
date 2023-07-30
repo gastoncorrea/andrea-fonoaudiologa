@@ -25,3 +25,13 @@ export interface Disponibilidad{
     hora_fin:Date;
     terapeuta:any;
 }
+
+export interface Turno{
+    id_turno:number;
+    fecha: Date;
+    dia:string;
+    hora_inicio:Date;
+    tiempo_consulta:Date;
+    usuario:any;
+    terapeuta:any;
+}
