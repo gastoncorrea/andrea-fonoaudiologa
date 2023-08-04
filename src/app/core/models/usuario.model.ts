@@ -1,3 +1,5 @@
+import { DayOfWeek } from "./class/dayOfWeek";
+
     export interface Usuario{
     nombre: String,
     apellido: String,
@@ -20,9 +22,9 @@ export interface Terapeuta{
 
 export interface Disponibilidad{
     id_disponibilidad:number;
-    dia: Date;
-    hora_inicio: Date;
-    hora_fin:Date;
+    dia: DayOfWeek;
+    hora_inicio: String;
+    hora_fin:String;
     terapeuta:any;
 }
 
