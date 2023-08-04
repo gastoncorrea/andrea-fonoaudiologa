@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormDisponibilityComponent } from './form-disponibility.component';
+import { FormAvailabilityComponent } from './form-availability.component';
 
-describe('FormDisponibilityComponent', () => {
-  let component: FormDisponibilityComponent;
-  let fixture: ComponentFixture<FormDisponibilityComponent>;
+describe('FormAvailabilityComponent', () => {
+  let component: FormAvailabilityComponent;
+  let fixture: ComponentFixture<FormAvailabilityComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormDisponibilityComponent ]
+      declarations: [ FormAvailabilityComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormDisponibilityComponent);
+    fixture = TestBed.createComponent(FormAvailabilityComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

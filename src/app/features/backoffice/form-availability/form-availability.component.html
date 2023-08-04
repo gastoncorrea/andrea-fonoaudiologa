@@ -1,0 +1,36 @@
+<div class="row justify-content-center align-items-center w-100 m-0 p-2">
+    <div class="card  col-sm-12 col-md-8 col-lg-6 my-5 shadow border-0 p-5 text-center">
+        <div class="card-header">Disponibilidad del terapeuta</div>
+        <div class="card-body">
+            <h5 class="card-title">Cual es su disponibilidad</h5>
+            <p class="card-text">Indique días y rango horario en el que se encuentra disponible</p>
+            <form [formGroup]="availabilityForm" class="my-5" (ngSubmit)="sendAvailability()">
+                <div class="form-floating">
+                    <select class="form-select" formControlName="dia" id="floatingSelect"
+                        aria-label="Floating label select">
+                        <option value="" disabled selected>Dias disponibles</option>
+                        <option value="MONDAY">Lunes</option>
+                        <option value="TUESDAY">Martes</option>
+                        <option value="WEDNESDAY">Miercoles</option>
+                        <option value="THURSDAY">Jueves</option>
+                        <option value="FRIDAY">Viernes</option>
+                    </select>
+                    <label for="floatingSelect">Selecciones el dia que quiere mostrarse disponible</label>
+                </div>
+                <div class="form-floating mb-4">
+                    <input type="time" class="form-control border-0 border-bottom shadow-none"
+                        placeholder="hora de inicio de la disponibilidad del dia" id="hora_inicial" formControlName="hora_inicio">
+                    <label for="hora_inicial" class="form-label">Hora de inicio:</label>
+                </div>
+                <div class="form-floating mb-4">
+                    <input type="time" class="form-control border-0 border-bottom shadow-none"
+                        placeholder="hora de finalizacion de la jornada" id="hora_fin" formControlName="hora_fin">
+                    <label for="hora_fin" class="form-label">Hora de finalizacion de la jornada:</label>
+                </div>
+                <button class="btn btn-outline-primary rounded-pill p-3 fw-bold mt-3 w-100" type="submit">
+                    Guardar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
