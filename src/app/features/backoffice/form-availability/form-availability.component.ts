@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { DisponibilidadService } from 'src/app/core/services/disponibilidad.service';
 
 @Component({
   selector: 'app-form-availability',
@@ -8,14 +9,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class FormAvailabilityComponent implements OnInit {
   availabilityForm: FormGroup;
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private availabilityService: DisponibilidadService) {
     this.availabilityForm = this.formBuilder.group({
       id_disponibilidad:["",[]],
       dia: ["",[Validators.required]],
       hora_inicio: ["",[]],
       hora_fin: ["",[]],
       terapeuta: formBuilder.group({
-        id_terapeuta:['',[]]
+        id_terapeuta:[1,[]]
       })
     })
   }
@@ -25,6 +26,10 @@ export class FormAvailabilityComponent implements OnInit {
 
 
   sendAvailability(){
-
+    if(this.availabilityForm.valid){
+      this.availabilityService.saveDisponibility(this.availabilityForm.value).subscribe((data)=>{
+        alert(data);
+      })
+    }
   }
 }
