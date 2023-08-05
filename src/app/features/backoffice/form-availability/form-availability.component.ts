@@ -11,10 +11,12 @@ export class FormAvailabilityComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) {
     this.availabilityForm = this.formBuilder.group({
       id_disponibilidad:["",[]],
-        dia: ["",[Validators.required]],
+      dia: ["",[Validators.required]],
       hora_inicio: ["",[]],
       hora_fin: ["",[]],
-      terapeuta: ["",[]]
+      terapeuta: formBuilder.group({
+        id_terapeuta:['',[]]
+      })
     })
   }
 
