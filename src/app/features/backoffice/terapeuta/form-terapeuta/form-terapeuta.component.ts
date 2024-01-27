@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Terapeuta } from 'src/app/core/models/usuario.model';
 import { TerapeutaService } from 'src/app/core/services/terapeuta.service';
 
 @Component({

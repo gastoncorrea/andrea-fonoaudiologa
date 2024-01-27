@@ -37,3 +37,10 @@ export interface Turno{
     usuario:any;
     terapeuta:any;
 }
+
+export interface Therapy{
+    id: number;
+    linkImagen: string;
+    nombre: string;
+    descripcion: string;
+}

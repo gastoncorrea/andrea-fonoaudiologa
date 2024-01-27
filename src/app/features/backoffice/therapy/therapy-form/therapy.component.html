@@ -1,0 +1,28 @@
+<div class="row justify-content-center align-items-center w-100 m-0 p-2">
+    <div class="card  col-sm-12 col-md-8 col-lg-6 my-5 shadow border-0 p-5 ">
+        <div class="card-header">Terapia</div>
+        <div class="card-body">
+            <h5 class="card-title">Nueva Terapia</h5>
+            <p class="card-text">Ingrese una nueva terapia</p>
+            <form [formGroup]="therapyForm" (ngSubmit)="therapySend()">
+                <div class="form-floating mb-4">
+                    <input type="text" class="form-control border-0 border-bottom shadow-none"
+                        placeholder="Link de la imagen" id="image" formControlName="linkImagen">
+                    <label for="link-imagen" class="form-label">Link de la imagen:</label>
+                </div>
+                <div class="form-floating mb-4">
+                    <input type="text" class="form-control border-0 border-bottom shadow-none"
+                        placeholder="Nombre del terapeuta" id="nombre" formControlName="nombre">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                </div>
+                <div class="form-floating mb-4">
+                    <input type="text" class="form-control border-0 border-bottom shadow-none"
+                        placeholder="Descripcion de la terapia" id="descripcion" formControlName="descripcion">
+                    <label for="descripcion" class="form-label">Descripcion de la terapia:</label>
+                </div>
+                <button class="btn btn-outline-primary rounded-pill p-3 fw-bold mt-3 w-100" type="submit">
+                    {{titleBottom}}
+                </button>
+            </form>
+        </div>
+    </div>

@@ -18,6 +18,10 @@ import { FormTerapeutaComponent } from './features/backoffice/terapeuta/form-ter
 import { ListTerapeutaComponent } from './features/backoffice/terapeuta/list-terapeuta/list-terapeuta.component';
 import { OurWorkComponent } from './features/public/components/our-work/our-work.component';
 import { FormAvailabilityComponent } from './features/backoffice/form-availability/form-availability.component';
+import { TherapyFormComponent } from './features/backoffice/therapy/therapy-form/therapy.component';
+import { TherapyListComponent } from './features/backoffice/therapy/therapy-list/therapy-list.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DashboardComponent } from './features/backoffice/admin/dashboard/dashboard.component';
 
 
 
@@ -34,7 +38,10 @@ import { FormAvailabilityComponent } from './features/backoffice/form-availabili
     FormTerapeutaComponent,
     ListTerapeutaComponent,
     OurWorkComponent,
-    FormAvailabilityComponent
+    FormAvailabilityComponent,
+    TherapyFormComponent,
+    TherapyListComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +49,8 @@ import { FormAvailabilityComponent } from './features/backoffice/form-availabili
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [UsuarioService],
   bootstrap: [AppComponent]
