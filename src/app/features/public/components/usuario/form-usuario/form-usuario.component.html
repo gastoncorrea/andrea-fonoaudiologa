@@ -1,9 +1,9 @@
 <div class="row justify-content-center align-items-center w-100 m-0 p-2">
     <div class="card text-center col-sm-12 col-md-8 col-lg-6 my-5 shadow border-0 p-5 ">
-        <div class="card-header">Paciente</div>
+        <div class="card-header">Usuario</div>
         <div class="card-body">
-            <h5 class="card-title">Nuevo paciente</h5>
-            <p class="card-text">Para poder gestionar un turno cargá estos datos.</p>
+            <h5 class="card-title">Nuevo usuario</h5>
+            <p class="card-text">Cree un usuario para poder utilizar los servicios de la web.</p>
             <form [formGroup]="userForm" (ngSubmit)="guardarUsuario()">
                 <div class="form-floating mb-4">
                     <input type="text" class="form-control border-0 border-bottom shadow-none"
@@ -16,32 +16,22 @@
                     <label for="apellido" class="form-label">Apellido:</label>
                 </div>
                 <div class="form-floating mb-4">
-                    <input type="date" class="form-control border-0 border-bottom shadow-none"
-                    placeholder="fecha de nacimiento del paciente" formControlName="fecha_nac">
-                    <label for="" class="form-label">Fecha de nacimiento:</label>
-                </div>
-                <div class="form-floating mb-4">
-                    <input type="number" class="form-control border-0 border-bottom shadow-none"
-                        placeholder="Dni del paciente" id="dni" formControlName="dni">
-                    <label for="" class="form-label">Dni:</label>
+                    <input type="text" class="form-control border-0 border-bottom shadow-none"
+                        placeholder="Nombre de usuario" id="nombre_usuario" formControlName="nombre_usuario">
+                    <label for="nombre_usuario" class="form-label">Nombre de usuario:</label>
                 </div>
                 <div class="form-floating mb-4">
                     <input type="text" class="form-control border-0 border-bottom shadow-none"
                     placeholder="Email del paciente" formControlName="email">
-                    <label for="" class="form-label">Correo electronico:</label>
+                    <label for="email" class="form-label">Correo electronico:</label>
                 </div>
                 <div class="form-floating mb-4">
-                    <input type="number" class="form-control border-0 border-bottom shadow-none"
-                        placeholder="Telefono del paciente" formControlName="telefono">
-                    <label for="" class="form-label">Telefono:</label>
-                </div>
-                <div class="form-floating mb-4">
-                    <input type="text" class="form-control border-0 border-bottom shadow-none"
-                        placeholder="Obra social del paciente" formControlName="obra_social">
-                    <label for="" class="form-label">Obra social:</label>
+                    <input type="password" class="form-control border-0 border-bottom shadow-none"
+                        placeholder="password del usuario" formControlName="password">
+                    <label for="password" class="form-label">Contraseña:</label>
                 </div>
                 <button class="btn btn-outline-primary rounded-pill p-3 fw-bold mt-3 w-100" type="submit">
-                    Continuar
+                    Guardar
                 </button>
             </form>
         </div>

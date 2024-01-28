@@ -1,13 +1,13 @@
 import { DayOfWeek } from "./class/dayOfWeek";
 
-    export interface Usuario{
-    nombre: String,
-    apellido: String,
-    dni: number,
-    fecha_nac: Date,
-    email: String,
-    telefono: number,
-    obra_social: String
+    export interface User{
+    id_usuario:number,
+    nombre: string,
+    apellido: string,
+    nombre_usuario: string,
+    email: string,
+    password: string,
+    id_tipoUsuario:number
 }
 
 export interface Terapeuta{

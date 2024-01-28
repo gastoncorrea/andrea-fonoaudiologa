@@ -41,7 +41,7 @@ export class TherapyFormComponent implements OnInit {
         alert(resp.therapy);
       })
     }
-    this.router.navigate(['therapy/list']);
+    this.router.navigate(['admin/dashboard/therapy/list']);
     }
 
   cargarForm(therapy:Therapy){

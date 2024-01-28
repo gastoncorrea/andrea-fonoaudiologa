@@ -15,11 +15,10 @@ export class FormUsuarioComponent implements OnInit {
     this.userForm = this.formBuilder.group({
       nombre: ["",[Validators.required, Validators.minLength(4)]],
       apellido:["",[Validators.required,Validators.minLength(2)]],
-      fecha_nac: ["",[Validators.required]],
-      dni: ["",[Validators.required, Validators.minLength(8),Validators.maxLength(8)]],
+      nombre_usuario: ["",[Validators.required]],
       email: ["",[Validators.required]],
-      telefono:["",[]],
-      obra_social: ["",[]]
+      password:["",[]],
+      tipoUsuario: ["",[]]
     })
    }
 

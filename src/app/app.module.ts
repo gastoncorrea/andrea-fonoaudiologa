@@ -22,6 +22,7 @@ import { TherapyFormComponent } from './features/backoffice/therapy/therapy-form
 import { TherapyListComponent } from './features/backoffice/therapy/therapy-list/therapy-list.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DashboardComponent } from './features/backoffice/admin/dashboard/dashboard.component';
+import { UserListComponent } from './features/backoffice/admin/users/user-list/user-list.component';
 
 
 
@@ -41,7 +42,8 @@ import { DashboardComponent } from './features/backoffice/admin/dashboard/dashbo
     FormAvailabilityComponent,
     TherapyFormComponent,
     TherapyListComponent,
-    DashboardComponent
+    DashboardComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,

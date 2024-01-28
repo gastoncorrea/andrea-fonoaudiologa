@@ -1,19 +1,27 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { Usuario } from '../models/usuario.model';
+import { User } from '../models/usuario.model';
+import { BehaviorSubject } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
+  private editUser = new BehaviorSubject<any>(null);
+  editTherapy$:Observable<User> = this.editUser.asObservable();
+
+  actualizarUsuario(user:User){
+    this.editUser.next(user);
+  }
 
   constructor(private http: HttpClient) { }
-  URL:String="http://localhost:8080/paciente/";
+  URL:String="http://localhost:8080/usuario/";
 
   
 
-  saveUser(usuario: Usuario):Observable<any>{
+  saveUser(usuario: User):Observable<any>{
     return this.http.post(this.URL + "save",usuario,{responseType : 'text'});
   }
 
@@ -25,17 +33,16 @@ export class UsuarioService {
     return this.http.get(this.URL+"find/"+id);
   }
 
-  updateUser(id:number, usuario:Usuario):Observable<any>{
+  updateUser(id:number, usuario:User):Observable<any>{
     return this.http.put(this.URL+"update/"+id,{nombre: usuario.nombre,
                                                 apellido: usuario.apellido,
-                                                fecha_nac: usuario.fecha_nac,
-                                                dni: usuario.dni,
+                                                nombre_usuario: usuario.nombre_usuario,
                                                 email: usuario.email,
-                                                telefono: usuario.telefono,
-                                                obra_social: usuario.obra_social});
+                                                password: usuario.password
+                                                });
   }
 
   deleteUser(id:number): Observable<any>{
-    return this.http.delete(this.URL+"delete/"+id);
+    return this.http.delete(this.URL+"delete/"+id,{responseType:'text'});
   }
 }
