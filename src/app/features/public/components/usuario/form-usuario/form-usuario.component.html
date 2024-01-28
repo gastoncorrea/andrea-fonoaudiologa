@@ -2,7 +2,7 @@
     <div class="card text-center col-sm-12 col-md-8 col-lg-6 my-5 shadow border-0 p-5 ">
         <div class="card-header">Usuario</div>
         <div class="card-body">
-            <h5 class="card-title">Nuevo usuario</h5>
+            <h5 class="card-title">{{titleForm}}</h5>
             <p class="card-text">Cree un usuario para poder utilizar los servicios de la web.</p>
             <form [formGroup]="userForm" (ngSubmit)="guardarUsuario()">
                 <div class="form-floating mb-4">
@@ -31,7 +31,7 @@
                     <label for="password" class="form-label">Contraseña:</label>
                 </div>
                 <button class="btn btn-outline-primary rounded-pill p-3 fw-bold mt-3 w-100" type="submit">
-                    Guardar
+                    {{titleForm}}
                 </button>
             </form>
         </div>

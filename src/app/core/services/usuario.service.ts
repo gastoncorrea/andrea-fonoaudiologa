@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class UsuarioService {
   private editUser = new BehaviorSubject<any>(null);
-  editTherapy$:Observable<User> = this.editUser.asObservable();
+  editUser$:Observable<User> = this.editUser.asObservable();
 
   actualizarUsuario(user:User){
     this.editUser.next(user);
@@ -34,12 +34,7 @@ export class UsuarioService {
   }
 
   updateUser(id:number, usuario:User):Observable<any>{
-    return this.http.put(this.URL+"update/"+id,{nombre: usuario.nombre,
-                                                apellido: usuario.apellido,
-                                                nombre_usuario: usuario.nombre_usuario,
-                                                email: usuario.email,
-                                                password: usuario.password
-                                                });
+    return this.http.put(this.URL+"update/"+id,usuario);
   }
 
   deleteUser(id:number): Observable<any>{
