@@ -23,6 +23,7 @@ import { TherapyListComponent } from './features/backoffice/therapy/therapy-list
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DashboardComponent } from './features/backoffice/admin/dashboard/dashboard.component';
 import { UserListComponent } from './features/backoffice/admin/users/user-list/user-list.component';
+import { RegisterComponent } from './features/backoffice/terapeuta/register/register.component';
 
 
 
@@ -43,7 +44,8 @@ import { UserListComponent } from './features/backoffice/admin/users/user-list/u
     TherapyFormComponent,
     TherapyListComponent,
     DashboardComponent,
-    UserListComponent
+    UserListComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

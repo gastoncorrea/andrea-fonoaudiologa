@@ -11,6 +11,7 @@ import { TherapyFormComponent } from './features/backoffice/therapy/therapy-form
 import { TherapyListComponent } from './features/backoffice/therapy/therapy-list/therapy-list.component';
 import { DashboardComponent } from './features/backoffice/admin/dashboard/dashboard.component';
 import { UserListComponent } from './features/backoffice/admin/users/user-list/user-list.component';
+import { RegisterComponent } from './features/backoffice/terapeuta/register/register.component';
 
 
 const routes:Routes = [
@@ -23,7 +24,7 @@ const routes:Routes = [
   {path: 'therapy/create', component: TherapyFormComponent},
   {path: 'admin/dashboard/therapy/list', component: TherapyListComponent},
   {path: 'therapy/update/:id', component: TherapyFormComponent},
-  {path: 'therapist/create', component: FormTerapeutaComponent},
+  {path: 'therapist/create', component: RegisterComponent},
   {path: 'admin/dashboard/therapist-list', component: ListTerapeutaComponent},
   {path: 'therapist-list/update/:id',component: FormTerapeutaComponent},
   {path: 'admin/dashboard',component: DashboardComponent},

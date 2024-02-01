@@ -1,0 +1,29 @@
+<div class="text-center m-5">
+    <div *ngIf="!isTherapist">
+        <h1>¿Sos Terapeuta de Esinia?</h1>
+    </div>
+    <div *ngIf="!codigoTerapeuta && !isTherapist">
+        <form [formGroup]="emailForm" (submit)="enviarEmail()">
+            <div>
+                <label for="email-terapeuta" class="d-block">Ingresa tu email:</label>
+                <input type="email" name="email-terapeuta" id="email-terapeuta"formControlName="email" class="mx-auto my-3 d-block border-none">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Enviar email</button>
+            </div>
+        </form>
+    </div>
+    <div *ngIf="codigoTerapeuta" class="p-3">
+        <form  [formGroup]="codigoForm" (submit)="enviarCodigo()">
+            <div>
+                <label for="codigo" class="d-block">Ingresa el codigo que enviamos a tu mail</label>
+                <input type="number" name="codigo" id="codigo" formControlName="codigo" class="d-block mx-auto my-3 border-none">
+                <button type="submit" class="btn btn-primary">Enviar codigo</button>
+            </div>
+        </form>
+    </div>
+    <div *ngIf="isTherapist">
+        <h1>Muy bien, ahora ingresa tus datos</h1>
+        <app-form-terapeuta></app-form-terapeuta>
+    </div>
+</div>
