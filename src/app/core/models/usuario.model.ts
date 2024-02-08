@@ -49,7 +49,7 @@ export interface Auth{
     id:number;
     email: string;
     codigo:number;
-    rol:Rol[];
+    rol:Rol;
 }
 
 export interface Rol{

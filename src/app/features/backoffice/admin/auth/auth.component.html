@@ -1,0 +1,24 @@
+<div class="row justify-content-center align-items-center w-100 m-0 p-2">
+    <div class="card text-center col-sm-12 col-md-8 col-lg-6 my-5 shadow border-0 p-5 ">>
+        <div class="card-header">Autorizacion</div>
+        <div class="card-body">
+            <h5 class="card-title">Nuevo autorización</h5>
+            <p class="card-text">Esta acción le permite dar una nueva autorización para ingresar al sistema</p>
+            <form [formGroup]="authForm" (submit)="enviarAuth()">
+                <div class="form-floating mb-4">
+                    <input type="email" name="authorized-user" id="authorized-user" formControlName="email"
+                        class="form-control border-0 border-bottom shadow-none">
+                    <label for="authorized-user" class="form-label">ingrese el email del usuario autorizado:</label>
+                </div>
+                <div class="form-floating mb-4" formGroupName="rol">
+                    <input type="number" class="form-control border-0 border-bottom shadow-none"
+                        placeholder="Asignar rol" id="rol" formControlName="id">
+                    <label for="rol" class="form-label">Rol</label>
+                </div>
+                <button class="btn btn-outline-primary rounded-pill p-3 fw-bold mt-3 w-100" type="submit">
+                    Continuar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

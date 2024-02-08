@@ -12,6 +12,7 @@ import { TherapyListComponent } from './features/backoffice/therapy/therapy-list
 import { DashboardComponent } from './features/backoffice/admin/dashboard/dashboard.component';
 import { UserListComponent } from './features/backoffice/admin/users/user-list/user-list.component';
 import { RegisterComponent } from './features/backoffice/terapeuta/register/register.component';
+import { AdminAuthComponent } from './features/backoffice/admin/auth/auth.component';
 
 
 const routes:Routes = [
@@ -28,6 +29,7 @@ const routes:Routes = [
   {path: 'admin/dashboard/therapist-list', component: ListTerapeutaComponent},
   {path: 'therapist-list/update/:id',component: FormTerapeutaComponent},
   {path: 'admin/dashboard',component: DashboardComponent},
+  {path: 'admin/dashboard/auth/form',component: AdminAuthComponent},
 ];
 
 @NgModule({

@@ -24,6 +24,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DashboardComponent } from './features/backoffice/admin/dashboard/dashboard.component';
 import { UserListComponent } from './features/backoffice/admin/users/user-list/user-list.component';
 import { RegisterComponent } from './features/backoffice/terapeuta/register/register.component';
+import { AdminAuthComponent } from './features/backoffice/admin/auth/auth.component';
 
 
 
@@ -45,7 +46,8 @@ import { RegisterComponent } from './features/backoffice/terapeuta/register/regi
     TherapyListComponent,
     DashboardComponent,
     UserListComponent,
-    RegisterComponent
+    RegisterComponent,
+    AdminAuthComponent
   ],
   imports: [
     BrowserModule,
