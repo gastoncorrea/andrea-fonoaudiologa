@@ -44,3 +44,17 @@ export interface Therapy{
     nombre: string;
     descripcion: string;
 }
+
+export interface Auth{
+    id:number;
+    email: string;
+    codigo:number;
+    rol:Rol[];
+}
+
+export interface Rol{
+    id:number;
+    nombreRol:String;
+    usuario:User[];
+    autorizaciones: Auth[];
+}
