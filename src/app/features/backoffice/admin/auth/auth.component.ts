@@ -29,6 +29,7 @@ export class AdminAuthComponent implements OnInit {
 
   enviarAuth(){
     this.authService.nuevaAuth(this.authForm.value).subscribe((resp)=>{
+      console.log(resp);
       alert(resp);
     })
   }

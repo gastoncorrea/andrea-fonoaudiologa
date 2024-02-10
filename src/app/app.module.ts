@@ -25,6 +25,7 @@ import { DashboardComponent } from './features/backoffice/admin/dashboard/dashbo
 import { UserListComponent } from './features/backoffice/admin/users/user-list/user-list.component';
 import { RegisterComponent } from './features/backoffice/terapeuta/register/register.component';
 import { AdminAuthComponent } from './features/backoffice/admin/auth/auth.component';
+import { AuthListComponent } from './features/backoffice/admin/auth-list/auth-list.component';
 
 
 
@@ -47,7 +48,8 @@ import { AdminAuthComponent } from './features/backoffice/admin/auth/auth.compon
     DashboardComponent,
     UserListComponent,
     RegisterComponent,
-    AdminAuthComponent
+    AdminAuthComponent,
+    AuthListComponent
   ],
   imports: [
     BrowserModule,
