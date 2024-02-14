@@ -28,4 +28,8 @@ export class AuthorizationService {
     return this.http.delete(this.URL+'/delete/'+id,{responseType: 'text'});
   }
 
+  traerUnaAuth(id:number):Observable<any>{
+    return this.http.get(this.URL+'/find/'+id);
+  }
+
 }

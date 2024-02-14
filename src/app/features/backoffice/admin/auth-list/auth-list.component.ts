@@ -37,6 +37,7 @@ export class AuthListComponent implements OnInit {
   deleteAuth(id: number) {
     this.authServ.eliminarAuth(id).subscribe((resp) => {
       alert(resp);
+      this.ngOnInit();
     }
 
     )
