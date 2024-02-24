@@ -1,8 +1,8 @@
 <div class="text-center m-5">
-    <div *ngIf="!isTherapist">
+    <div *ngIf="!authReg">
         <h1>¿Sos Terapeuta de Esinia?</h1>
     </div>
-    <div *ngIf="!codigoTerapeuta && !isTherapist">
+    <div *ngIf="!codigoTerapeuta && !authReg">
         <form [formGroup]="emailForm" (submit)="enviarEmail()">
             <div>
                 <label for="email-terapeuta" class="d-block">Ingresa tu email:</label>
@@ -13,7 +13,7 @@
             </div>
         </form>
     </div>
-    <div *ngIf="codigoTerapeuta" class="p-3">
+    <div *ngIf="authReg && !receiveRol" class="p-3">
         <form  [formGroup]="codigoForm" (submit)="enviarCodigo()">
             <div>
                 <label for="codigo" class="d-block">Ingresa el codigo que enviamos a tu mail</label>
@@ -22,7 +22,7 @@
             </div>
         </form>
     </div>
-    <div *ngIf="isTherapist">
+    <div *ngIf="receiveRol">
         <h1>Muy bien, ahora ingresa tus datos</h1>
         <app-form-usuario></app-form-usuario>
     </div>
