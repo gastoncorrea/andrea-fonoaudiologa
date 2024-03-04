@@ -7,7 +7,7 @@ import { DayOfWeek } from "./class/dayOfWeek";
     nombre_usuario: string,
     email: string,
     password: string,
-    id_tipoUsuario:number
+    rol:Rol
 }
 
 export interface Terapeuta{

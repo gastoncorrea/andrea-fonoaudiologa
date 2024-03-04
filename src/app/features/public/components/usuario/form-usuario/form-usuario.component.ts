@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import { ActivatedRoute, Router } from '@angular/router';
-import { User } from 'src/app/core/models/usuario.model';
+import { Rol, User } from 'src/app/core/models/usuario.model';
 import { UsuarioService } from 'src/app/core/services/usuario.service';
 
 
@@ -11,6 +11,7 @@ import { UsuarioService } from 'src/app/core/services/usuario.service';
   styleUrls: ['./form-usuario.component.css']
 })
 export class FormUsuarioComponent implements OnInit {
+  @Input() receiveRol?:Rol;
   userForm: FormGroup;
   updateMode: Boolean = false;
   editUser: any;
@@ -19,22 +20,33 @@ export class FormUsuarioComponent implements OnInit {
 
   constructor(private usuarioService : UsuarioService,private formBuilder:FormBuilder,
               private route:ActivatedRoute,private router: Router) {
-    this.userForm = this.formBuilder.group({
-      nombre: ["",[Validators.required, Validators.minLength(4)]],
-      apellido:["",[Validators.required,Validators.minLength(2)]],
-      nombre_usuario: ["",[Validators.required]],
-      email: ["",[Validators.required]],
-      password:["",[]],
-      tipoUsuario: ["",[]]
-    })
+                this.userForm = this.formBuilder.group({
+                  nombre: ["",[Validators.required, Validators.minLength(4)]],
+                  apellido:["",[Validators.required,Validators.minLength(2)]],
+                  nombre_usuario: ["",[Validators.required]],
+                  email: ["",[Validators.required]],
+                  password:["",[]],
+                  rol:this.formBuilder.group(
+                    {
+                      id:[null,[]]
+                    }
+                  )
+                })
    }
 
   ngOnInit(): void {
+
     this.editarUsuario();
+    console.log(this.receiveRol);
+
+    if (this.receiveRol != null) {
+      this.userForm.get('rol.id')?.setValue(this.receiveRol.id);
+    }
   }
 
   guardarUsuario(){
     if(!this.updateMode){
+      console.log(this.userForm.value);
       this.usuarioService.saveUser(this.userForm.value).subscribe((res)=>{
         alert(res);
       })

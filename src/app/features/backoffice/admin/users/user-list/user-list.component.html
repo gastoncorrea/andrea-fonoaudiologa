@@ -7,7 +7,7 @@
           <th scope="col">Apellido</th>
           <th scope="col">Nombre usuario</th>
           <th scope="col">email</th>
-          <th scope="col">tipo usuario</th>
+          <th scope="col">Rol usuario</th>
           <th scope="col">Editar/Eliminar</th>
         </tr>
       </thead>
@@ -18,7 +18,7 @@
           <td>{{user.apellido}}</td>
           <td>{{user.nombre_usuario}}</td>
           <td>{{user.email}}</td>
-          <td>{{user.id_tipoUsuario}}</td>
+          <td>{{user.rol.nombreRol}}</td>
           <td>
             <div><i class="fa-solid fa-pen-to-square fa-xl me-3" (click)="editar(user)"></i><i
                 class="fa-regular fa-trash-can fa-xl" (click)="deleteTherapy(user.id_usuario)"></i></div>
