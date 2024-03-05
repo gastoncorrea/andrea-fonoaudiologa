@@ -23,7 +23,7 @@ export class FormUsuarioComponent implements OnInit {
                 this.userForm = this.formBuilder.group({
                   nombre: ["",[Validators.required, Validators.minLength(4)]],
                   apellido:["",[Validators.required,Validators.minLength(2)]],
-                  nombre_usuario: ["",[Validators.required]],
+                  nombreUsuario: ["",[Validators.required]],
                   email: ["",[Validators.required]],
                   password:["",[]],
                   rol:this.formBuilder.group(
@@ -49,6 +49,7 @@ export class FormUsuarioComponent implements OnInit {
       console.log(this.userForm.value);
       this.usuarioService.saveUser(this.userForm.value).subscribe((res)=>{
         alert(res);
+        console.log(res.error);
       })
     }else{
       console.log(this.idUpdate,this.userForm.value);
