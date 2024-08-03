@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { User } from '../models/usuario.model';
+import { Login, User } from '../models/usuario.model';
 import { BehaviorSubject } from 'rxjs';
 
 
@@ -39,5 +39,9 @@ export class UsuarioService {
 
   deleteUser(id:number): Observable<any>{
     return this.http.delete(this.URL+"delete/"+id,{responseType:'text'});
+  }
+
+  loginUser(credential:Login):Observable<any>{
+    return this.http.post(this.URL+"login",credential);
   }
 }

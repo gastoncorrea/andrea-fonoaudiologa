@@ -58,3 +58,8 @@ export interface Rol{
     usuario:User[];
     autorizaciones: Auth[];
 }
+
+export interface Login{
+    nombreEmailUsuario:string,
+    password:string
+}

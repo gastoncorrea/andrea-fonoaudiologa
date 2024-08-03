@@ -4,15 +4,15 @@
         <div class="card-body">
             <h5 class="card-title">Si sos parte de esinia ingresa</h5>
             <p class="card-text">Exclusivo para terapeutas</p>
-            <form >
+            <form [formGroup]="loginForm" (submit)="enviarForm()">
                 <div class="form-floating mb-4">
                     <input type="text" class="form-control border-0 border-bottom shadow-none"
-                        placeholder="Nombre del paciente" id="nombre-usuario" >
-                    <label for="nombre-usuario" class="form-label">Usuario</label>
+                        placeholder="Nombre del paciente" id="nombre-usuario" formControlName="nombreEmailUsuario">
+                    <label for="nombre-usuario" class="form-label">Usuario/Email</label>
                 </div>
                 <div class="form-floating mb-4">
                     <input type="text" class="form-control border-0 border-bottom shadow-none"
-                        placeholder="Nombre del paciente" id="nombre-usuario" >
+                        placeholder="Nombre del paciente" id="nombre-usuario" formControlName="password">
                     <label for="nombre-usuario" class="form-label">Contraseña:</label>
                 </div>
                 <button class="btn btn-outline-primary rounded-pill p-3 fw-bold mt-3 w-100" type="submit">

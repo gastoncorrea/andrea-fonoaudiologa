@@ -8,7 +8,9 @@ import { DisponibilidadService } from 'src/app/core/services/disponibilidad.serv
   styleUrls: ['./form-availability.component.css']
 })
 export class FormAvailabilityComponent implements OnInit {
+
   availabilityForm: FormGroup;
+  
   constructor(private formBuilder: FormBuilder, private availabilityService: DisponibilidadService) {
     this.availabilityForm = this.formBuilder.group({
       id_disponibilidad:["",[]],
